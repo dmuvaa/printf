@@ -11,7 +11,7 @@
 int print_ev(char c, va_list ap)
 {
 	int count, i;
-	identifier_t ids[] = {
+	identify_t ids[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"r", print_str},
