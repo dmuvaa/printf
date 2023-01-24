@@ -3,9 +3,24 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <stddef.h>
 #include <unistd.h>
 
-int _putchar(char c);
-int _printf(const char *format, ...);
+ /* Prototypes to print the conversion specifiers */ 
+extern printf(const char *format, ...);
+extern int print_ev(char c, va_list ap);
+extern int print_c(va_list);
+extern int print_s(va_list);
+extern int print_str(va_list);
+extern int print_d(va_list);
+extern int print_d(va_list);
+extern int print_b(va_list);
+extern int print_u(va_list);
+extern int print_o(va_list);
+extern int print_x(va_list);
+extern int print_X(va_list);
+extern int print_p(va_list);
+
+
 
 #endif
