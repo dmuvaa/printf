@@ -22,5 +22,15 @@ extern int print_X(va_list);
 extern int print_p(va_list);
 
 
+/**
+* struct identify - holds a string identifier and a function pointer
+* @s: is the format specifier
+* @print: pointer to function to be called
+*/
+typedef struct identify
+{
+	char *s;
+	int (*print)(va_list ap);
+}identify_t;
 
 #endif
