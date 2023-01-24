@@ -20,14 +20,14 @@ int _printf(const char *format, ...)
 	{
 		if (!is_specifier && (*format) != '%')
 		{
-			count += _putchar(*format++);
+			count += putchar(*format++);
 			continue;
 		}
 		else if (*format == '%')
 		{
 			if (is_specifier)
 			{
-				count += _putchar(*format++);
+				count += putchar(*format++);
 				is_specifier = 0;
 			}
 			else

@@ -7,7 +7,7 @@
 #include <unistd.h>
 
  /* Prototypes to print the conversion specifiers */ 
-extern int printf(const char *format, ...);
+extern int _printf(const char *format, ...);
 extern int print_ev(char c, va_list ap);
 extern int print_c(va_list);
 extern int print_s(va_list);
@@ -21,7 +21,7 @@ extern int print_X(va_list);
 extern int print_p(va_list);
 
 
-/**
+/*
 * struct identify - holds a string identifier and a function pointer
 * @s: is the format specifier
 * @print: pointer to function to be called
