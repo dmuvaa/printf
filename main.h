@@ -6,17 +6,11 @@
 #include <stddef.h>
 #include <unistd.h>
 
-<<<<<<< HEAD
+
 /** Prototypes to print the conversion specifiers */
-extern int printf(const char *format, ...);
-=======
- /* Prototypes to print the conversion specifiers */ 
-<<<<<<< HEAD
 extern int _printf(const char *format, ...);
-=======
+
 int _printf(const char *format, ...);
->>>>>>> 7f88842b42131c9182e9f00db5ee0647599b21db
->>>>>>> bde7394682d485ea292f34b20009c32cbacd2c26
 extern int print_ev(char c, va_list ap);
 extern int print_c(va_list);
 extern int print_s(va_list);
