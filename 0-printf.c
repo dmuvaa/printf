@@ -13,9 +13,15 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	char *s, c;
+	int i = 0, len;
 
-	int i = 0, len = strlen(format);
+	len = strlen(format);
 
+	if (strlen(format) == 0)
+	{
+		printf("Error: Empty or null format string\n");
+		return (-1);
+	}
 
 	va_start(list, format);
 		while (i < len)
@@ -24,25 +30,49 @@ int _printf(const char *format, ...)
 			{
 				i++;
 
-			switch (format[i])
-			{
-						case ('c'):
+				switch (format[i])
+				{
+					case ('c'):
 						c = va_arg(list, int);
 						putchar(c);
 						break;
 
-						case('s'):
+					case('s'):
 						s = va_arg(list, char*);
-
-					while (*s)
-					putchar(*s++);
-							break;
+						if (s)
+						{
+							while (*s)
+							putchar(*s++);
+						}
+						else
+						{
+							printf("(null)");
+						}
+						break;
+					case '%':
+						putchar('%');
+						break;
+					default:
+						printf("Error: Invalid format specifier '%%%c'\n", format[i]);
 			}
-			}
-			else
-			putchar(format[i]);
-				i++;
 		}
+		else
+			{
+				putchar(format[i]);
+			}	
+			i++;
+	}
+	va_end(list);
+	return (0);
+}
+
+/**
+	* main - entry point
+	* Return: (void)
+	*/
+int main(void)
+{
+	_printf("Hello, %s!\n", "world");
 	return (0);
 }
 
