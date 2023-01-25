@@ -7,7 +7,7 @@
 #include <unistd.h>
 
  /* Prototypes to print the conversion specifiers */ 
-int _printf(const char *format, ...);
+extern int _printf(const char *format, ...);
 extern int print_ev(char c, va_list ap);
 extern int print_c(va_list);
 extern int print_s(va_list);
