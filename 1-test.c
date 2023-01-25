@@ -1,12 +1,13 @@
-#include <stdio.h>
-#include <stdarg.h>
+#include "main.h"
 
 int _printf(const char *format, ...)
 {
+	int i, j;
 	int count = 0;
 	va_list args;
+
 	va_start(args, format);
-	for (int i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -22,7 +23,7 @@ int _printf(const char *format, ...)
 			{
 				char *s = va_arg(args, char*);
 
-				for (int j = 0; s[j] != '\0'; j++)
+				for (j = 0; s[j] != '\0'; j++)
 				{
 					putchar(s[j]);
 					count++;
@@ -43,3 +44,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+
