@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdarg.h>
+#include "main.h"
+#include <string.h>
+/**
+	* _printf - produces output according to a format
+	* @format: lists the type of arguments according to format
+	*
+	* Return: 0
+	*/
+
+int _printf(const char *format, ...)
+{
+	va_list list;
+	char *s, c;
+	int i = 0, len;
+
+	len = strlen(format);
+
+	if (strlen(format) == 0)
+	{
+		printf("Error: Empty or null format string\n");
+		return (-1);
+	}
+
+	va_start(list, format);
+		while (i < len)
+		{
+			if (format[i] == '%')
+			{
+				i++;
+
+				switch (format[i])
+				{
+					case ('c'):
+						c = va_arg(list, int);
+						putchar(c);
+						break;
+
+					case('s'):
+						s = va_arg(list, char*);
+						if (s)
+						{
+							while (*s)
+							putchar(*s++);
+						}
+						else
+						{
+							printf("(null)");
+						}
+						break;
+					case '%':
+						putchar('%');
+						break;
+					default:
+						printf("Error: Invalid format specifier '%%%c'\n", format[i]);
+			}
+		}
+		else
+			{
+				putchar(format[i]);
+			}	
+			i++;
+	}
+	va_end(list);
+	return (0);
+}
+
+/**
+	* main - entry point
+	* Return: (void)
+	*/
+int main(void)
+{
+	_printf("Hello, %s!\n", "world");
+	return (0);
+}
+
