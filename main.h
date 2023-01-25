@@ -6,7 +6,7 @@
 #include <stddef.h>
 #include <unistd.h>
 
- /* Prototypes to print the conversion specifiers */ 
+/** Prototypes to print the conversion specifiers */
 extern int printf(const char *format, ...);
 extern int print_ev(char c, va_list ap);
 extern int print_c(va_list);
@@ -30,6 +30,6 @@ typedef struct identify
 {
 	char *s;
 	int (*print)(va_list ap);
-}identify_t;
+} identify_t;
 
 #endif
