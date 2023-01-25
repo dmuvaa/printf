@@ -22,6 +22,10 @@ extern int print_X(va_list);
 extern int print_p(va_list);
 
 
+extern int _putchar(char c);
+extern int print_string(char *);
+
+
 /*
 * struct identify - holds a string identifier and a function pointer
 * @s: is the format specifier
