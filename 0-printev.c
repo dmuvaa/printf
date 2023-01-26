@@ -14,6 +14,7 @@ int print_ev(char c, va_list ap)
 	identify_t ids[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"S", print_S},
 		{"r", print_str},
 		{"d", print_d},
 		{"i", print_d},
@@ -23,6 +24,7 @@ int print_ev(char c, va_list ap)
 		{"x", print_x},
 		{"X", print_X},
 		{"p", print_p},
+		{"R", print_rot},
 		{NULL, NULL}
 	};
 
