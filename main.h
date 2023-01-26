@@ -35,7 +35,7 @@ extern int print_addr(unsigned long int);
 extern int print_str_rev(char *);
 extern int print_addr(unsigned long int);
 
-
+unsigned int handle_buf(char *buf, char c, unsigned int ibuf);
 /*
 * struct identify - holds a string identifier and a function pointer
 * @s: is the format specifier
