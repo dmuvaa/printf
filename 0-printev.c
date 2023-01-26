@@ -14,8 +14,12 @@ int print_ev(char c, va_list ap)
 	identify_t ids[] = {
 		{"c", print_c},
 		{"s", print_s},
+<<<<<<< HEAD
 		{"S", print_S},
 		{"r", print_str},
+=======
+		{"r", print_s_r},
+>>>>>>> aaf57267fbc40c3c12a07bcb66f97e11c20501e9
 		{"d", print_d},
 		{"i", print_d},
 		{"b", print_b},
