@@ -66,13 +66,3 @@ int _printf(const char *format, ...)
 	return (0);
 }
 
-/**
-	* main - entry point
-	* Return: (void)
-	*/
-int main(void)
-{
-	_printf("Hello, %s!\n", "world");
-	return (0);
-}
-
