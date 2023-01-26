@@ -34,6 +34,7 @@ int print_ev(char c, va_list ap)
 	{
 		if (*ids[i].s == c)
 			count = ids[i].print(ap);
+
 		i++;
 	}
 	return (count);
