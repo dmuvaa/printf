@@ -39,6 +39,8 @@ int _printf(const char *format, ...)
 			{
 				is_specifier = 1;
 				format++;
+
+				printf("Error: Invalid format specifier '%%%c\n", is_specifier);
 			}
 			continue;
 		}
