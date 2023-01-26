@@ -31,7 +31,8 @@ int _printf(const char *format, ...)
 		{
 			if (is_specifier)
 			{
-				count += _putchar(*format++);
+				count += _putchar(*format);
+					format++;
 				is_specifier = 0;
 			}
 			else
