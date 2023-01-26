@@ -20,7 +20,12 @@ int print_c(va_list ap)
  */
 int print_s(va_list ap)
 {
-	return (print_str(va_arg(ap, char *)));
+	char *s = va_arg(ap, char *);
+
+	if (s == NULL)
+		s = "(null)";
+
+	return (print_str(s));
 }
 
 /**

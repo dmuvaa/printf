@@ -12,6 +12,9 @@ int print_addr(unsigned long int num)
 {
 	unsigned int count;
 
+	if (num == 0)
+		return (print_str("(nil)"));
+
 	count = 0;
 	if (num / 16)
 		count += print_addr(num / 16);

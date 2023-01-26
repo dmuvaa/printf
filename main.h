@@ -10,6 +10,7 @@ extern int _printf(const char *format, ...);
 extern int print_ev(char, va_list);
 extern int print_c(va_list);
 extern int print_s(va_list);
+extern int print_S(va_list);
 extern int print_s_r(va_list);
 extern int print_d(va_list);
 extern int print_b(va_list);
@@ -18,12 +19,13 @@ extern int print_o(va_list);
 extern int print_x(va_list);
 extern int print_X(va_list);
 extern int print_p(va_list);
+extern int print_rot(va_list);
 
 
 extern int _putchar(char);
 extern int print_str(char *);
 extern int print_int(int);
-extern int print_str(char *);
+extern int print_STR(char *);
 extern int print_bin(unsigned int);
 extern int print_HEX(unsigned int);
 extern int print_hex(unsigned int);
