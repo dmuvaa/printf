@@ -24,7 +24,5 @@ int print_str_rev(char *str)
 		rev--;
 	}
 
-	_putchar('\0');
-
-	return (++count);
+	return (count);
 }
