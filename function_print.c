@@ -29,7 +29,7 @@ int print_s(va_list ap)
 }
 
 /**
- * print_str - print a string in reverse
+ * print_s_r - print a string in reverse
  * @ap: va_list
  * Return: count of character printed
  */
