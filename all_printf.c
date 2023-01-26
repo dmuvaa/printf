@@ -31,8 +31,16 @@ int _printf(const char *format, ...)
 		{
 			if (is_specifier)
 			{
-				count += _putchar(*format);
+				if (*(format + 1) == '%')
+				{
+					count += _putchar(*format++);
 					format++;
+				}
+				else
+				{
+					count += _putchar(*format);
+					format++;
+				}
 				is_specifier = 0;
 			}
 			else
