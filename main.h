@@ -23,8 +23,17 @@ extern int print_p(va_list);
 
 
 extern int _putchar(char c);
-extern int print_string(char *);
+extern int print_str(char *);
 extern int print_int(int n);
+extern int print_str(char *str);
+extern int print_bin(unsigned int num);
+extern int print_HEX(unsigned int num);
+extern int print_hex(unsigned int num);
+extern int print_oct(unsigned int num);
+extern int print_uint(unsigned int num);
+extern int print_addr(unsigned long int num);
+extern int print_str_rev(char *str);
+extern int print_addr(unsigned long int num);
 
 
 /*
