@@ -25,6 +25,7 @@ int print_ev(char c, va_list ap)
 		{"X", print_X},
 		{"p", print_p},
 		{"R", print_rot},
+		{"%", print_pct},
 		{NULL, NULL}
 	};
 

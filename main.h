@@ -20,6 +20,7 @@ extern int print_x(va_list);
 extern int print_X(va_list);
 extern int print_p(va_list);
 extern int print_rot(va_list);
+extern int print_pct(va_list);
 
 
 extern int _putchar(char);
@@ -35,6 +36,7 @@ extern int print_addr(unsigned long int);
 extern int print_str_rev(char *);
 extern int print_addr(unsigned long int);
 extern void check_null(const char *);
+
 
 /*
 * struct identify - holds a string identifier and a function pointer
