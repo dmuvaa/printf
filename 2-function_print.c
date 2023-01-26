@@ -57,5 +57,5 @@ int print_p(va_list ap)
 {
 	_putchar('0');
 	_putchar('x');
-	return (print_addr(va_arg(ap, unsigned long int)) +2);
+	return (print_addr(va_arg(ap, unsigned long int)) + 2);
 }
