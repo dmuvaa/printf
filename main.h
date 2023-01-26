@@ -34,6 +34,7 @@ extern int print_uint(unsigned int);
 extern int print_addr(unsigned long int);
 extern int print_str_rev(char *);
 extern int print_addr(unsigned long int);
+extern void check_null(const char *);
 
 unsigned int handle_buf(char *buf, char c, unsigned int ibuf);
 /*

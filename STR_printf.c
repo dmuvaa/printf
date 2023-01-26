@@ -2,7 +2,7 @@
 
 /**
  * print_STR - prints a string and unprintable characters
- * string to print
+ * @str: string to print
  * Return: int, number of characters printed
  */
 
