@@ -24,7 +24,7 @@ extern int print_p(va_list);
 
 extern int _putchar(char c);
 extern int print_string(char *);
-extern int print_integer(int n);
+extern int print_int(int n);
 
 
 /*
